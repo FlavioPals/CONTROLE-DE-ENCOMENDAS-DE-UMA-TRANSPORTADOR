@@ -29,3 +29,11 @@
 
 ## Tecnologias
 - NODE, Express, Typescript, postgresql, docker
+
+## Wiki
+
+### Pastas 
+Pasta src é responsavel por guardar o codigo como um todo
+Pasta Domain é responsavel por guardar todo o código do projeto da camada mais interna possivel
+Pasta entities é responsavel pelo código das entidades
+Pasta use-cases é responsavel pelo código de casos de uso 
