@@ -4,7 +4,8 @@
   "description": "- [ ] A aplicação deve ter dois tipos de usuário, entregador e/ou admin\r - [ ] Deve ser possível realizar login com CPF e Senha\r - [ ] Deve ser possível realizar o CRUD dos entregadores\r - [ ] Deve ser possível realizar o CRUD das encomendas\r - [ ] Deve ser possível realizar o CRUD dos destinatários\r - [ ] Deve ser possível marcar uma encomenda como aguardando (Disponível para retirada)\r - [ ] Deve ser possível retirar uma encomenda\r - [ ] Deve ser possível marcar uma encomenda como entregue\r - [ ] Deve ser possível marcar uma encomenda como devolvida\r - [ ] Deve ser possível listar as encomendas com endereços de entrega próximo ao local do entregador\r - [ ] Deve ser possível alterar a senha de um usuário\r - [ ] Deve ser possível listar as entregas de um usuário\r - [ ] Deve ser possível notificar o destinatário a cada alteração no status da encomenda",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "vitest run",
+    "test:watch": "vitest run --watch"
   },
   "keywords": [],
   "author": "",

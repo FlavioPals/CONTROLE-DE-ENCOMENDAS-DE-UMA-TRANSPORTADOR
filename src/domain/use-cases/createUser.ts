@@ -14,5 +14,11 @@ interface ICreateUserUseCaseResponse {
 export class CreateUserUseCase {
     constructor(private userRepository: IUserRepository) {}
 
-    // async execute: create me :)
+    async execute({name, cpf, password}: ICreateUserUseCaseRequest):Promise<ICreateUserUseCaseResponse>{
+        const user = new User(name, cpf, password)
+
+        await this.userRepository.create(user)
+
+        return {user}
+    }
 }
