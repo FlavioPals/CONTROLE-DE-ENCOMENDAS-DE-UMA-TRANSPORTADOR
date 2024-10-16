@@ -13,15 +13,15 @@ export class User {
         name: string,
         cpf: string,
         password: string,
-        deliveryArriving: Delivery[],
-        deliveryArrived: Delivery[],
+        deliveryArriving?: Delivery[],
+        deliveryArrived?: Delivery[],
         id?: string,
     ) {
         this.id = id ?? randomUUID()
         this.name = name
         this.cpf = cpf
-        this.deliveryArriving = deliveryArriving
-        this.deliveryArrived = deliveryArrived
+        this.deliveryArriving = deliveryArriving ?? []
+        this.deliveryArrived = deliveryArrived ?? []
         this.password = password
     }
 }
