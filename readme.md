@@ -28,7 +28,7 @@
 - DDD, Domain Events, Clean Architecture, Testes unitários e e2e
 
 ## Tecnologias
-- NODE, Express, Typescript, postgresql, docker
+- NODE, Fastify, Typescript, postgresql, docker
 
 ## Wiki
 
