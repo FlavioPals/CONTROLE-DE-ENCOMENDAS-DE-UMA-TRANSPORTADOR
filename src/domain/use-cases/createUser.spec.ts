@@ -14,13 +14,14 @@ test('create user', async () => {
     const useCase = new CreateUserUseCase(fakeAnswerRepository)
 
     const user = await useCase.execute({
-        name: 'test',
-        cpf: 'test',
+        name: 'Flavio',
+        cpf: '664.643.260-07',
         password: 'test'
+
     })
 
     expect(user).toBeTruthy()
     expect(user.user.id).toEqual(expect.any(String))
-    expect(user.user.name).toEqual('test')
+    expect(user.user.createdAt).toBeInstanceOf(Date)
 })
 
