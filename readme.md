@@ -37,3 +37,4 @@ Pasta Domain é responsavel por guardar todo o código do projeto da camada mais
 Pasta entities é responsavel pelo código das entidades
 Pasta use-cases é responsavel pelo código de casos de uso 
 Pasta Core é responsavel por compartilhar codigos que podem ser usados em varios lugares da aplicação
+Pasta test é responsavel por armazenar os entidades usadas apenas para testes, como repositorios em memoria
