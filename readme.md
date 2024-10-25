@@ -38,3 +38,4 @@
 - Pasta use-cases é responsavel pelo código de casos de uso 
 - Pasta Core é responsavel por compartilhar codigos que podem ser usados em varios lugares da aplicação
 - Pasta test é responsavel por armazenar os entidades usadas apenas para testes, como repositorios em memoria
+
