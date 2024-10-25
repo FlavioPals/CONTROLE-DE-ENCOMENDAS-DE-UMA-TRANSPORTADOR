@@ -1,6 +1,8 @@
+import { randomUUID } from "crypto"
 import { Entity } from "../../core/entity"
 
 interface IAdminProps {
+    id: string
     name: string
     email: string
     password: string
@@ -8,20 +10,30 @@ interface IAdminProps {
 }
 
 export class Admin extends Entity<IAdminProps> {
+    get id() {
+        return this.props.id
+    }
+
     get name() {
         return this.props.name
     }
+
     get email() {
         return this.props.email
     }
-
  
     get password() {
         return this.props.password
     }
+
     get createdAt(): Date | undefined {
         return this.props.createdAt
     }
+
+    set id(id: string) {
+        this.props.id = id
+    }
+    
 
     set name(name: string) {
         if (name.length < 3) {
@@ -53,8 +65,9 @@ export class Admin extends Entity<IAdminProps> {
         this.props.createdAt = createdAt
     }
 
-    constructor(props: IAdminProps, id?: string) {
-        super(props, id);
+    constructor(props: IAdminProps) {
+        super(props);
+        this.id = props.id 
         this.name = props.name
         this.createdAt = props.createdAt ?? new Date()
         this.password = props.password

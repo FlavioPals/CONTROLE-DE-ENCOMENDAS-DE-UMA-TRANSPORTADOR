@@ -3,6 +3,7 @@ import { Delivery } from "./delivery";
 import { Entity } from "../../core/entity";
 
 interface IDeliveryManProps {
+    //fazer o id aqui do entregador
     name: string;
     email: string;
     password: string;
@@ -12,6 +13,6 @@ interface IDeliveryManProps {
 
 export class DeliveryMan extends Entity< IDeliveryManProps>{
     constructor(props: IDeliveryManProps,id?: string) {
-        super(props, id);
+        super(props);
     }
 }

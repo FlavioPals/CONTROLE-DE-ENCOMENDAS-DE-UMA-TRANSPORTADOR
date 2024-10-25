@@ -2,6 +2,7 @@ import { randomUUID } from "crypto";
 import { Entity } from "../../core/entity";
 
 interface IDeliveryProps {
+    // fazer o id do delivery
     userId: string;
     address: string;
     status: string;
@@ -73,6 +74,6 @@ export class Delivery extends Entity<IDeliveryProps>{
 
 
     constructor(props: IDeliveryProps, id?: string) {
-        super(props, id);
+        super(props);
     }
 }

@@ -1,8 +1,10 @@
 import { Delivery } from "./delivery"
 import { Entity } from "../../core/entity"
 import { isValidCPF } from "../../core/isValidCPF"
+import { randomUUID } from "crypto"
 
 interface IUserProps {
+    userId: string 
     name: string
     cpf: string
     password: string
@@ -12,6 +14,10 @@ interface IUserProps {
 }
 
 export class User extends Entity<IUserProps> {
+    get id() {
+        return this.props.userId
+    }
+
     get name() {
         return this.props.name
     }
@@ -33,6 +39,10 @@ export class User extends Entity<IUserProps> {
     }
     get createdAt(): Date | undefined {
         return this.props.createdAt
+    }
+
+    set userId(userId: string) {
+        this.props.userId = userId
     }
 
     set name(name: string) {
@@ -69,7 +79,8 @@ export class User extends Entity<IUserProps> {
     }
 
     constructor(props: IUserProps, id?: string) {
-        super(props, id);
+        super(props);
+        this.userId = props.userId 
         this.name = props.name
         this.deliveryArriving = props.deliveryArrived ?? []
         this.deliveryArrived = props.deliveryArrived ?? []
