@@ -15,8 +15,10 @@ describe('Create User Use Case' ,() => {
         const {user} = await sut.execute({
             name: 'John Doe',
             cpf: '664.643.260-07',
-            password: '123456'
+            password: '123456',
+            
         })
+        console.log(user)
 
         expect(user.id).toEqual(expect.any(String))
         })   
@@ -26,7 +28,8 @@ describe('Create User Use Case' ,() => {
             sut.execute({
             name: 'John Doe',
             cpf: '11111111',
-            password: '123456'
+            password: '123456',
+            userId: '123'
         })
         ).rejects.toBeInstanceOf(Error)
     })
@@ -35,14 +38,16 @@ describe('Create User Use Case' ,() => {
         await sut.execute({
             name: 'John Doe',
             cpf: '664.643.260-07',
-            password: '123456'
+            password: '123456',
+            userId: '123'
         })
 
         await expect(() => 
             sut.execute({
             name: 'John Doe',
             cpf: '664.643.260-07',
-            password: '123456'
+            password: '123456',
+            userId: '123'
         })
         ).rejects.toBeInstanceOf(Error)
     }
